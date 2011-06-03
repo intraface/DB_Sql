@@ -12,7 +12,7 @@
 require_once 'PEAR/PackageFileManager2.php';
 PEAR::setErrorHandling(PEAR_ERROR_DIE);
 
-$version = '0.0.1';
+$version = '0.1.0';
 $notes = '* initial package';
 $stability = 'alpha';
 
@@ -54,6 +54,9 @@ $pfm->addGlobalReplacement('package-info', '@package-version@', 'version');
 $pfm->clearDeps();
 $pfm->setPhpDep('5.1.0');
 $pfm->setPearinstallerDep('1.5.0');
+
+$pfm->addPackageDepWithChannel('required', 'MDB2', 'pear.php.net', '2.4.1');
+$pfm->addPackageDepWithChannel('required', 'MDB2_driver_mysql', 'pear.php.net', '1.4.1');
 
 $pfm->generateContents();
 

@@ -2,6 +2,8 @@
 /**
  * This is an old PHP4 database abstraction class. It has be rewritten to use
  * a singleton of PEARs MDB2.
+ *
+ * PHP Version 4
  */
 require_once 'MDB2.php';
 
